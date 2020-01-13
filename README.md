@@ -2,7 +2,11 @@
 
 ## Important Disclaimer
 
-All this repo does is talking to Plaid/Google APIs and writing tokens to your local file system. If you don't feel safe entering real bank credentials, audit the code yourself to make sure.
+All this repo does is talk to Plaid/Google APIs and write tokens to your local file system. If you don't feel safe entering real bank credentials, audit the code yourself to make sure.
+
+## Install Dependencies
+
+This project uses Node.js. Run `npm install` in the repo root to install necessary dependencies.
 
 ## Setting up API keys
 
@@ -30,9 +34,9 @@ First things first - rename `.env.sample` to `.env`. Variables in this file will
 
 > I use a Google Sheet because it's convenient. If you don't trust Google or want to build your own fancy interface, you can totally do that - but that's out of scope for this demo.
 
-- First, create a Google Sheets spreadsheet, and save its ID in `lib/credentials.json` as `sheets.sheet_id`.
+- First, create a Google Sheets spreadsheet, and save its ID in `.env` as `SHEETS_SHEET_ID`.
 
-- Then, go to [Google Sheets API Quickstart](https://developers.google.com/sheets/api/quickstart/nodejs), and click the "Enable the Google Sheets API" button. Follow instructions and download the credentials JSON file. Fill in the following fields in `.env`:
+- Then, go to [Google Sheets API Quickstart](https://developers.google.com/sheets/api/quickstart/nodejs), and click the "Enable the Google Sheets API" button. Follow instructions and download the credentials JSON file. Take a look at the file and fill in the following fields in `.env`:
 
   - `SHEETS_CLIENT_ID`
   - `SHEETS_CLIENT_SECRET`
